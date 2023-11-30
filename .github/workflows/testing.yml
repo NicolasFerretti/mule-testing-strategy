@@ -42,8 +42,8 @@ jobs:
       - name: Automation using Any CLI
         run: anypoint-cli-v4 account:user:describe --client_id "${{ secrets.CA_CLIENT_ID }}" --client_secret "${{ secrets.CA_CLIENT_SECRET }}"
         
-      # Automation using Any CLI
-      - name: Automation using Any CLI
+      # Validation
+      - name: Validate with ruleset
         run: |
           anypoint-cli-v4 governance:api:validate \
           08162ea5-5a95-49a9-a503-1031766dc9d7/orders-api/1.0.0 \
